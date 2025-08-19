@@ -2122,7 +2122,7 @@
       "clouds": 27,
       "pop": 0.67,
       "rain_mm": 0.37,
-      "humidity": 93
+      "humidity": 94
     },
     {
       "dt": 1755594000,
@@ -2131,7 +2131,7 @@
       "clouds": 61,
       "pop": 0.22,
       "rain_mm": 0.13,
-      "humidity": 88
+      "humidity": 89
     },
     {
       "dt": 1755604800,
@@ -2465,6 +2465,15 @@
       "pop": 0.08,
       "rain_mm": 0,
       "humidity": 63
+    },
+    {
+      "dt": 1756004400,
+      "temp": 11.38,
+      "wind_speed": 2.6,
+      "clouds": 100,
+      "pop": 0,
+      "rain_mm": 0,
+      "humidity": 62
     }
   ]
 }
