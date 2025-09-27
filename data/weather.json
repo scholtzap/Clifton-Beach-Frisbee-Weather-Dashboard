@@ -5273,6 +5273,15 @@
       "pop": 0.2,
       "rain_mm": 0.11,
       "humidity": 67
+    },
+    {
+      "dt": 1759374000,
+      "temp": 13.44,
+      "wind_speed": 5.99,
+      "clouds": 46,
+      "pop": 0,
+      "rain_mm": 0,
+      "humidity": 60
     }
   ]
 }
