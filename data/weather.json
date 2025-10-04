@@ -5777,6 +5777,15 @@
       "pop": 0,
       "rain_mm": 0,
       "humidity": 84
+    },
+    {
+      "dt": 1759978800,
+      "temp": 14.4,
+      "wind_speed": 4.57,
+      "clouds": 28,
+      "pop": 0,
+      "rain_mm": 0,
+      "humidity": 85
     }
   ]
 }
