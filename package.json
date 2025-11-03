@@ -1,0 +1,26 @@
+{
+  "name": "beach-ultimate-weather-dashboard",
+  "version": "1.0.0",
+  "description": "Unified multi-location beach weather dashboard for Ultimate Frisbee",
+  "main": "index.html",
+  "scripts": {
+    "build": "node scripts/build-html.js",
+    "fetch:weather": "node scripts/fetch-weather.js",
+    "fetch:tides": "node scripts/fetch-tides.js",
+    "fetch:busyness": "python scripts/fetch-busyness.py",
+    "fetch:all": "npm run fetch:weather && npm run fetch:tides && npm run fetch:busyness"
+  },
+  "keywords": [
+    "weather",
+    "dashboard",
+    "beach",
+    "ultimate",
+    "frisbee"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "js-yaml": "^4.1.0",
+    "node-fetch": "^2.7.0"
+  }
+}

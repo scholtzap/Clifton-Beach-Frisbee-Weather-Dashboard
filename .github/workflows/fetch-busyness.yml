@@ -1,0 +1,44 @@
+name: Fetch Busyness Data
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # Every 6 hours
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-busyness:
+    runs-on: ubuntu-latest
+    env:
+      LOCATION: ${{ vars.LOCATION || 'clifton' }}
+      GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+      GOOGLE_PLACE_ID: ${{ secrets.GOOGLE_PLACE_ID }}
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install Python dependencies
+        run: |
+          pip install pyyaml
+          git clone https://github.com/m-wrzr/populartimes.git
+          cd populartimes
+          pip install -r requirements.txt
+          cd ..
+
+      - name: Fetch busyness data
+        run: python scripts/fetch-busyness.py
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/busyness.json
+          git commit -m "Auto-update busyness data for ${{ env.LOCATION }}" || echo "No changes to commit"
+          git push
