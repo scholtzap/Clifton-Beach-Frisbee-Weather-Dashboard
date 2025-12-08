@@ -10163,21 +10163,21 @@
     },
     {
       "dt": 1765238400,
-      "temp": 18.8,
+      "temp": 19.31,
       "wind_speed": 3.66,
-      "clouds": 12,
+      "clouds": 6,
       "pop": 0,
       "rain_mm": 0,
-      "humidity": 82
+      "humidity": 79
     },
     {
       "dt": 1765249200,
-      "temp": 18.55,
+      "temp": 19.03,
       "wind_speed": 3.22,
-      "clouds": 40,
+      "clouds": 28,
       "pop": 0,
       "rain_mm": 0,
-      "humidity": 80
+      "humidity": 79
     },
     {
       "dt": 1765260000,
@@ -10508,6 +10508,15 @@
       "temp": 16.93,
       "wind_speed": 3.93,
       "clouds": 32,
+      "pop": 0,
+      "rain_mm": 0,
+      "humidity": 60
+    },
+    {
+      "dt": 1765659600,
+      "temp": 16.42,
+      "wind_speed": 3.64,
+      "clouds": 86,
       "pop": 0,
       "rain_mm": 0,
       "humidity": 60
