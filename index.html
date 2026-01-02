@@ -32,9 +32,10 @@
   <!-- YouTube Live Stream -->
   <div class="iframe-container">
     <iframe
+      id="youtube-livestream"
       width="100%"
       height="300"
-      src="https://www.youtube.com/embed/5-31MVekskY?autoplay=1&mute=1"
+      src="https://www.youtube.com/embed/live_stream?channel=UCLmKcWr9EjhgrlivvJQovOQ&autoplay=1&mute=1"
       frameborder="0"
       allowfullscreen
     ></iframe>
@@ -50,6 +51,18 @@
     ></iframe>
   </div>
 </section>
+
+
+<script>
+  // YouTube search configuration
+  window.YOUTUBE_SEARCH_CONFIG = {
+    enabled: true,
+    channel_id: "UCLmKcWr9EjhgrlivvJQovOQ",
+    title_contains: "Clifton 4th beach webcam"
+  };
+  // YouTube API key (restricted to scholtzap.github.io domain)
+  window.YOUTUBE_API_KEY = "AIzaSyBvjaTTOOBkip2R9IZIm_OXqaEaggN_R6Y";
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
