@@ -251,10 +251,24 @@ For issues or questions:
 
 ### Updating YouTube Embed URLs
 
-1. Edit `config.yml` in the main repository:
-   ```yaml
-   youtube_url: "https://www.youtube.com/embed/VIDEO_ID?autoplay=1&mute=1"
-   ```
+**Option 1: Static Channel URL** (for channels with single stream):
+```yaml
+youtube_url: "https://www.youtube.com/embed/live_stream?channel=CHANNEL_ID&autoplay=1&mute=1"
+```
+
+**Option 2: Dynamic Stream Finder** (for channels with multiple streams):
+```yaml
+youtube_url: "https://www.youtube.com/embed/live_stream?channel=CHANNEL_ID&autoplay=1&mute=1"
+youtube_search:
+  enabled: true
+  channel_id: "CHANNEL_ID"
+  title_contains: "Stream title keywords"
+```
+
+**Note**: Dynamic search requires a YouTube Data API v3 key in `scripts/build-html.js`. See [MULTI-REPO-WORKFLOW.md](MULTI-REPO-WORKFLOW.md#update-youtube-embed-urls) for setup details.
+
+**Deploy**:
+1. Edit `config.yml` in the main repository
 2. Test locally: `docker-compose up -d`
 3. Deploy: `./deploy-all.sh "Update YouTube embed URLs"`
 

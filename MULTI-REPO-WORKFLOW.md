@@ -141,14 +141,39 @@ git push
 
 ### Update YouTube Embed URLs
 
+#### Option 1: Static Channel URL (Simple)
+For channels with a single live stream:
 1. Edit `config.yml` in the main directory
-2. Find the video ID from YouTube URL (e.g., `https://www.youtube.com/watch?v=VIDEO_ID`)
-3. Update the `youtube_url` field for the location:
+2. Use the channel-based format:
    ```yaml
-   youtube_url: "https://www.youtube.com/embed/VIDEO_ID?autoplay=1&mute=1"
+   youtube_url: "https://www.youtube.com/embed/live_stream?channel=CHANNEL_ID&autoplay=1&mute=1"
    ```
-4. Test with Docker
-5. Deploy to production repos
+3. Test with Docker
+4. Deploy to production repos
+
+#### Option 2: Dynamic Stream Finder (Advanced)
+For channels with multiple live streams, use API-based search to find the correct stream by title:
+
+1. Edit `config.yml`:
+   ```yaml
+   youtube_url: "https://www.youtube.com/embed/live_stream?channel=CHANNEL_ID&autoplay=1&mute=1"
+   youtube_search:
+     enabled: true
+     channel_id: "CHANNEL_ID"
+     title_contains: "Stream title keywords"
+   ```
+
+2. **Required**: YouTube Data API v3 key is hardcoded in `scripts/build-html.js`
+   - Get key from [Google Cloud Console](https://console.cloud.google.com/)
+   - Enable "YouTube Data API v3"
+   - **Restrict the key** to your domain:
+     - HTTP referrers: `https://yourusername.github.io/*`
+     - API restrictions: YouTube Data API v3 only
+
+3. Test with Docker
+4. Deploy to production repos
+
+**How it works**: When the page loads, JavaScript calls the YouTube API to search for live streams on the channel, filters by title, and updates the iframe with the correct video ID.
 
 ### Add a New Location
 
@@ -214,10 +239,22 @@ Changes pushed to `main` branch are automatically deployed within a few minutes.
 
 ### YouTube Embeds Not Working
 
-- Verify video ID is correct
-- Check if video is a permanent 24/7 livestream
-- Ensure embedding is enabled on the YouTube video
-- Use format: `https://www.youtube.com/embed/VIDEO_ID?autoplay=1&mute=1`
+**For static channel URLs:**
+- Verify channel ID is correct
+- Use format: `https://www.youtube.com/embed/live_stream?channel=CHANNEL_ID&autoplay=1&mute=1`
+- Check if channel has at least one active live stream
+- Ensure embedding is enabled on the YouTube channel
+
+**For dynamic stream finder:**
+- Open browser DevTools (F12) → Console tab
+- Look for error messages from `findYouTubeLiveStream()` function
+- Common issues:
+  - `"No live streams found"`: Channel has no active streams
+  - `"No stream found matching title"`: Adjust `title_contains` in `config.yml` to match actual stream title
+  - `"YouTube API error"`: Check API key restrictions in Google Cloud Console
+  - API key not working: Verify domain restrictions include your GitHub Pages URL
+- Verify YouTube API key in `scripts/build-html.js` is correct
+- Check API quota hasn't been exceeded in Google Cloud Console
 
 ### Build Script Fails
 

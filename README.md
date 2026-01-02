@@ -72,7 +72,11 @@ locations:
       tides_lon: 18.4232
       windy_lat: -33.957
       windy_lon: 18.377
-    youtube_url: "https://www.youtube.com/embed/..."
+    youtube_url: "https://www.youtube.com/embed/live_stream?channel=CHANNEL_ID&autoplay=1&mute=1"
+    youtube_search:  # Optional: For channels with multiple streams
+      enabled: true
+      channel_id: "CHANNEL_ID"
+      title_contains: "Stream title keywords"
     windy_embed: "https://embed.windy.com/..."
     # ... more settings
 ```
