@@ -16,9 +16,13 @@ echo "📍 Deploying to Clifton..."
 cd /tmp/clifton-deploy
 cp "$MAIN_DIR/config.yml" .
 cp "$MAIN_DIR/script.js" .
+cp "$MAIN_DIR/style.css" .
+cp "$MAIN_DIR/README.md" .
+cp "$MAIN_DIR/DEPLOYMENT.md" .
+cp "$MAIN_DIR/MULTI-REPO-WORKFLOW.md" .
 cp -r "$MAIN_DIR/scripts" .
 LOCATION=clifton node scripts/build-html.js
-git add config.yml script.js scripts/ index.html
+git add config.yml script.js style.css README.md DEPLOYMENT.md MULTI-REPO-WORKFLOW.md scripts/ index.html
 git commit -m "$COMMIT_MSG" || echo "No changes to commit for Clifton"
 git push
 echo "✅ Clifton deployed!"
@@ -29,9 +33,13 @@ echo "📍 Deploying to Praia..."
 cd /tmp/praia-deploy
 cp "$MAIN_DIR/config.yml" .
 cp "$MAIN_DIR/script.js" .
+cp "$MAIN_DIR/style.css" .
+cp "$MAIN_DIR/README.md" .
+cp "$MAIN_DIR/DEPLOYMENT.md" .
+cp "$MAIN_DIR/MULTI-REPO-WORKFLOW.md" .
 cp -r "$MAIN_DIR/scripts" .
 LOCATION=praia node scripts/build-html.js
-git add config.yml script.js scripts/ index.html
+git add config.yml script.js style.css README.md DEPLOYMENT.md MULTI-REPO-WORKFLOW.md scripts/ index.html
 git commit -m "$COMMIT_MSG" || echo "No changes to commit for Praia"
 git push
 echo "✅ Praia deployed!"
