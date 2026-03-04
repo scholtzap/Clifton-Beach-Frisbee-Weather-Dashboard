@@ -16301,30 +16301,30 @@
     },
     {
       "dt": 1772604000,
-      "temp": 17.93,
+      "temp": 18.42,
       "wind_speed": 1.26,
-      "clouds": 29,
+      "clouds": 43,
       "pop": 0,
       "rain_mm": 0,
-      "humidity": 82
+      "humidity": 79
     },
     {
       "dt": 1772614800,
-      "temp": 19.86,
+      "temp": 19.26,
       "wind_speed": 2.29,
-      "clouds": 33,
+      "clouds": 41,
       "pop": 0,
       "rain_mm": 0,
-      "humidity": 74
+      "humidity": 75
     },
     {
       "dt": 1772625600,
-      "temp": 21.89,
+      "temp": 20.73,
       "wind_speed": 3.26,
-      "clouds": 60,
+      "clouds": 54,
       "pop": 0,
       "rain_mm": 0,
-      "humidity": 70
+      "humidity": 73
     },
     {
       "dt": 1772636400,
