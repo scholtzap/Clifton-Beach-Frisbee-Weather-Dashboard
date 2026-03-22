@@ -17615,16 +17615,16 @@
     },
     {
       "dt": 1774180800,
-      "temp": 19.43,
+      "temp": 20,
       "wind_speed": 8.56,
       "clouds": 0,
       "pop": 0,
       "rain_mm": 0,
-      "humidity": 71
+      "humidity": 68
     },
     {
       "dt": 1774191600,
-      "temp": 19.53,
+      "temp": 19.61,
       "wind_speed": 9.59,
       "clouds": 0,
       "pop": 0,
@@ -17963,6 +17963,15 @@
       "pop": 0,
       "rain_mm": 0,
       "humidity": 73
+    },
+    {
+      "dt": 1774602000,
+      "temp": 21.11,
+      "wind_speed": 3,
+      "clouds": 3,
+      "pop": 0,
+      "rain_mm": 0,
+      "humidity": 60
     }
   ]
 }
