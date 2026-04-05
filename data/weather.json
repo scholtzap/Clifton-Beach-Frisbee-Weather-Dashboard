@@ -2,21 +2,21 @@
   "hourly": [
     {
       "dt": 1775433600,
-      "temp": 17.14,
+      "temp": 16.66,
       "wind_speed": 4.24,
       "clouds": 92,
       "pop": 0.2,
       "rain_mm": 0.14,
-      "humidity": 62
+      "humidity": 66
     },
     {
       "dt": 1775444400,
-      "temp": 16.83,
+      "temp": 16.59,
       "wind_speed": 4.43,
       "clouds": 75,
       "pop": 0.2,
       "rain_mm": 0.16,
-      "humidity": 67
+      "humidity": 69
     },
     {
       "dt": 1775455200,
