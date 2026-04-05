@@ -5,8 +5,4 @@ When running inside WSL, avoid calling Windows executables (powershell.exe/cmd.e
 
 ## Repository context (Clifton deploy)
 
-Same as **AGENTS.md** in this repo: default Git branch is **`main`** for `Clifton-Beach-Frisbee-Weather-Dashboard`; **`origin`** targets Clifton, not Praia; Praia is a separate repo. For comparing Clifton vs Praia and planning ports, follow **AGENTS.md**.
-
-## Repository context (Clifton deploy)
-
 Same as **AGENTS.md** in this repo: default Git branch is **`main`** for `Clifton-Beach-Frisbee-Weather-Dashboard`; **`origin`** targets Clifton, not Praia; Praia is a separate repo. For comparing Clifton vs Praia and planning ports, follow the **Comparing Clifton vs Praia** section in **AGENTS.md**.
