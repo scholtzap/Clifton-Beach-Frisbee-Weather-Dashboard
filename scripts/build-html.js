@@ -81,9 +81,16 @@ if (loc.whatsapp_form) {
 `;
 }
 
-// Build YouTube search configuration script
+// Build YouTube search configuration script (browser key from env — never commit keys)
 let youtubeConfigScript = "";
 if (loc.youtube_search && loc.youtube_search.enabled) {
+  const youtubeApiKey = (process.env.YOUTUBE_API_KEY || "").trim();
+  if (!youtubeApiKey) {
+    console.error(
+      "❌ YOUTUBE_API_KEY is required when youtube_search.enabled is true. Set it in .env locally or GitHub Actions secret YOUTUBE_API_KEY."
+    );
+    process.exit(1);
+  }
   youtubeConfigScript = `
 <script>
   // YouTube search configuration
@@ -92,8 +99,7 @@ if (loc.youtube_search && loc.youtube_search.enabled) {
     channel_id: "${loc.youtube_search.channel_id}",
     title_contains: "${loc.youtube_search.title_contains}"
   };
-  // YouTube API key (restricted to scholtzap.github.io domain)
-  window.YOUTUBE_API_KEY = "REDACTED_ROTATED_KEY_REMOVED_FROM_HISTORY";
+  window.YOUTUBE_API_KEY = ${JSON.stringify(youtubeApiKey)};
 </script>
 `;
 }

@@ -163,10 +163,10 @@ For channels with multiple live streams, use API-based search to find the correc
      title_contains: "Stream title keywords"
    ```
 
-2. **Required**: YouTube Data API v3 key is hardcoded in `scripts/build-html.js`
-   - Get key from [Google Cloud Console](https://console.cloud.google.com/)
+2. **Required**: YouTube Data API v3 key via **`YOUTUBE_API_KEY`** (local `.env` or GitHub Actions secret; `build-html.js` injects it into `index.html`)
+   - Create a key in [Google Cloud Console](https://console.cloud.google.com/)
    - Enable "YouTube Data API v3"
-   - **Restrict the key** to your domain:
+   - **Restrict the key** to your site:
      - HTTP referrers: `https://yourusername.github.io/*`
      - API restrictions: YouTube Data API v3 only
 
@@ -253,7 +253,7 @@ Changes pushed to `main` branch are automatically deployed within a few minutes.
   - `"No stream found matching title"`: Adjust `title_contains` in `config.yml` to match actual stream title
   - `"YouTube API error"`: Check API key restrictions in Google Cloud Console
   - API key not working: Verify domain restrictions include your GitHub Pages URL
-- Verify YouTube API key in `scripts/build-html.js` is correct
+- Verify `YOUTUBE_API_KEY` is set in repo secrets and the **Fetch Weather Data** workflow receives it
 - Check API quota hasn't been exceeded in Google Cloud Console
 
 ### Build Script Fails
