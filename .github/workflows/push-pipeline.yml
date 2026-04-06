@@ -4,7 +4,7 @@ name: Push pipeline — build and refresh data
 
 on:
   push:
-    branches: [main, master]
+    branches: [main]
   workflow_dispatch:
 
 permissions:

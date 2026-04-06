@@ -3,6 +3,6 @@ Always assume Windows and PowerShell. Use Windows paths like C:\\... and PowerSh
 Whenever any AI-tool instruction file is updated, update the corresponding instruction files for all AI tools and all first-level folders under C:\\Users\\apsch\\OneDrive\\Documents to keep them in sync.
 When running inside WSL, avoid calling Windows executables (powershell.exe/cmd.exe) from the sandbox; WSL-to-Windows interop can fail (vsock/socket errors). Prefer native Linux tools or run the CLI outside WSL if Windows commands are required.
 
-## Repository context (Clifton deploy)
+## Repository context (this workspace only)
 
-Same as **AGENTS.md** in this repo: default Git branch is **`main`** for `Clifton-Beach-Frisbee-Weather-Dashboard`; **`origin`** targets Clifton, not Praia; Praia is a separate repo. For comparing Clifton vs Praia and planning ports, follow the **Comparing Clifton vs Praia** section in **AGENTS.md**.
+Applies only in **this** Beach / Clifton deploy folder: default branch **`main`**, **`origin`** = Clifton repo, Praia is separate. Full cross-repo comparison: use **`COMPARISON-AGENT-PROMPT.md`** with a new agent in a fresh directory. See **AGENTS.md** for workspace-scoped notes.

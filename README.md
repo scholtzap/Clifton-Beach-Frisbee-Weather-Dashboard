@@ -52,7 +52,7 @@ In **Settings > Secrets and variables > Actions > Secrets**, add the following s
 
 1. Go to **Settings > Pages**
 2. Under **Source**, select **Deploy from a branch**
-3. Select the **main** (or **master**) branch
+3. Select the **main** branch
 4. Set folder to **/ (root)**
 5. Click **Save**
 
@@ -88,7 +88,7 @@ locations:
 
 ### When GitHub Actions Run:
 
-- **On every push to `main` or `master`:** workflow **Push pipeline — build and refresh data** builds `index.html` and refreshes weather, tides, and busyness in **one commit** (Clifton deploy repo recommended).
+- **On every push to `main`:** workflow **Push pipeline — build and refresh data** builds `index.html` and refreshes weather, tides, and busyness in **one commit** (Clifton deploy repo recommended).
 - **On schedule / manual run:** the separate **Fetch Weather / Tide / Busyness** workflows still run as before.
 
 1. **Reads LOCATION variable** from repository variables
