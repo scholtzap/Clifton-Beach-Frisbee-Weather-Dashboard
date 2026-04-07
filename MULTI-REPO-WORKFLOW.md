@@ -58,6 +58,23 @@ That's it! This script will:
 ./deploy-all.sh "Fix YouTube embed URLs"
 ```
 
+### Windows (PowerShell)
+
+There is no `/tmp` on Windows. Use **two deploy clones** on a path you choose (for example under `%USERPROFILE%\deploy` or `C:\deploy`), then either Git Bash with `./deploy-all.sh` (the script defaults `MAIN_DIR` to its own directory) or PowerShell:
+
+```powershell
+$env:CLIFTON_DEPLOY_PATH = "C:\deploy\clifton-deploy"
+$env:PRAIA_DEPLOY_PATH = "C:\deploy\praia-deploy"
+# Optional: $env:DEPLOY_SOURCE_ROOT = "C:\Users\you\Documents\beach-ultimate-weather-dashboard"
+# Clifton only — inject browser YouTube key for builds (never commit `.env`):
+# $env:YOUTUBE_API_KEY = "<browser key from Google Cloud, referrer-restricted>"
+.\deploy-all.ps1 -CommitMessage "Fix YouTube embed URLs"
+```
+
+Verify each clone with `git remote -v` before the first run. To align the **Praia** repo with Clifton (same CI patterns), copy `.github/workflows/push-pipeline.yml` from Clifton into the Praia clone, set repository **variable** `LOCATION` to `praia`, and mirror the same **Actions secrets** (`OWM_API_KEY`, `STORMGLASS_API_KEY`, `GOOGLE_API_KEY`, and `YOUTUBE_API_KEY` if you enable `youtube_search` for that location). Keep `scripts/build-html.js` identical in both repos (env-based `YOUTUBE_API_KEY`, no hardcoded keys).
+
+**Committed `index.html`:** For a safe default checkout without secrets, build locally **without** `YOUTUBE_API_KEY`; the page keeps the channel fallback embed. **CI** (`push-pipeline` / `update-data`) must define `YOUTUBE_API_KEY` when `youtube_search.enabled` is true so production Pages get a working search. Rotate any key that was ever committed in plain text.
+
 ---
 
 ### Manual Method (For Advanced Use)

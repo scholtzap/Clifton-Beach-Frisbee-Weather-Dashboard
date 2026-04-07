@@ -1,0 +1,3 @@
+# Fresh clones for side-by-side diffs; do not commit (large + redundant with remotes)
+clifton/
+praia/

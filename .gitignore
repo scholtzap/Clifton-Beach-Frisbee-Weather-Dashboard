@@ -14,3 +14,7 @@ docker-compose.override.yml
 
 # Data files (optionally track these)
 # data/*.json
+
+# Local clone targets for Clifton vs Praia diffs (keep COMPARISON-REPORT.md tracked)
+comparison/clifton/
+comparison/praia/
