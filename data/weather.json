@@ -4430,30 +4430,30 @@
     },
     {
       "dt": 1780747200,
-      "temp": 15.49,
+      "temp": 16.46,
       "wind_speed": 2.58,
-      "clouds": 15,
+      "clouds": 37,
       "pop": 0,
       "rain_mm": 0,
-      "humidity": 56
+      "humidity": 51
     },
     {
       "dt": 1780758000,
-      "temp": 15.22,
+      "temp": 16.03,
       "wind_speed": 2.54,
-      "clouds": 24,
+      "clouds": 36,
       "pop": 0,
       "rain_mm": 0,
-      "humidity": 56
+      "humidity": 52
     },
     {
       "dt": 1780768800,
-      "temp": 14.19,
+      "temp": 14.95,
       "wind_speed": 2.07,
-      "clouds": 18,
+      "clouds": 24,
       "pop": 0,
       "rain_mm": 0,
-      "humidity": 59
+      "humidity": 57
     },
     {
       "dt": 1780779600,
