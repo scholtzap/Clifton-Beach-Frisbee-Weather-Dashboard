@@ -6122,25 +6122,25 @@
     },
     {
       "dt": 1782777600,
-      "temp": 9.37,
+      "temp": 9.5,
       "wind_speed": 3.15,
       "clouds": 1,
       "pop": 0,
       "rain_mm": 0,
-      "humidity": 76
+      "humidity": 75
     },
     {
       "dt": 1782788400,
-      "temp": 9.64,
+      "temp": 9.73,
       "wind_speed": 2.21,
       "clouds": 1,
       "pop": 0,
       "rain_mm": 0,
-      "humidity": 73
+      "humidity": 72
     },
     {
       "dt": 1782799200,
-      "temp": 9.69,
+      "temp": 9.73,
       "wind_speed": 1.75,
       "clouds": 0,
       "pop": 0,
