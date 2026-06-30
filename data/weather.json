@@ -6176,30 +6176,30 @@
     },
     {
       "dt": 1782842400,
-      "temp": 13.68,
+      "temp": 12.32,
       "wind_speed": 4.04,
-      "clouds": 6,
+      "clouds": 8,
       "pop": 0,
       "rain_mm": 0,
-      "humidity": 55
+      "humidity": 57
     },
     {
       "dt": 1782853200,
-      "temp": 13.18,
+      "temp": 12.47,
       "wind_speed": 3.81,
-      "clouds": 16,
+      "clouds": 12,
       "pop": 0,
       "rain_mm": 0,
-      "humidity": 65
+      "humidity": 63
     },
     {
       "dt": 1782864000,
-      "temp": 12.43,
+      "temp": 12.39,
       "wind_speed": 3.85,
-      "clouds": 35,
+      "clouds": 26,
       "pop": 0,
       "rain_mm": 0,
-      "humidity": 72
+      "humidity": 67
     },
     {
       "dt": 1782874800,
