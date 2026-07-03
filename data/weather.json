@@ -6410,30 +6410,30 @@
     },
     {
       "dt": 1783123200,
-      "temp": 12.6,
+      "temp": 11.1,
       "wind_speed": 4.46,
-      "clouds": 74,
+      "clouds": 82,
       "pop": 0.07,
+      "rain_mm": 0,
+      "humidity": 72
+    },
+    {
+      "dt": 1783134000,
+      "temp": 11.4,
+      "wind_speed": 4.8,
+      "clouds": 88,
+      "pop": 0.05,
       "rain_mm": 0,
       "humidity": 70
     },
     {
-      "dt": 1783134000,
-      "temp": 12.28,
-      "wind_speed": 4.8,
-      "clouds": 90,
-      "pop": 0.05,
-      "rain_mm": 0,
-      "humidity": 67
-    },
-    {
       "dt": 1783144800,
-      "temp": 11.77,
+      "temp": 11.55,
       "wind_speed": 4.72,
-      "clouds": 78,
+      "clouds": 79,
       "pop": 0.03,
       "rain_mm": 0,
-      "humidity": 63
+      "humidity": 66
     },
     {
       "dt": 1783155600,
@@ -6758,6 +6758,15 @@
       "pop": 0,
       "rain_mm": 0,
       "humidity": 85
+    },
+    {
+      "dt": 1783544400,
+      "temp": 13.94,
+      "wind_speed": 5.8,
+      "clouds": 22,
+      "pop": 0,
+      "rain_mm": 0,
+      "humidity": 86
     }
   ]
 }
