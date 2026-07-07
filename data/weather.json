@@ -6680,30 +6680,30 @@
     },
     {
       "dt": 1783447200,
-      "temp": 16.25,
+      "temp": 13.88,
       "wind_speed": 0.95,
-      "clouds": 24,
-      "pop": 0,
-      "rain_mm": 0,
-      "humidity": 79
-    },
-    {
-      "dt": 1783458000,
-      "temp": 15.58,
-      "wind_speed": 1.89,
-      "clouds": 13,
+      "clouds": 31,
       "pop": 0,
       "rain_mm": 0,
       "humidity": 84
     },
     {
-      "dt": 1783468800,
-      "temp": 14.52,
-      "wind_speed": 1.27,
-      "clouds": 9,
+      "dt": 1783458000,
+      "temp": 14.25,
+      "wind_speed": 1.89,
+      "clouds": 24,
       "pop": 0,
       "rain_mm": 0,
-      "humidity": 89
+      "humidity": 86
+    },
+    {
+      "dt": 1783468800,
+      "temp": 14.31,
+      "wind_speed": 1.27,
+      "clouds": 16,
+      "pop": 0,
+      "rain_mm": 0,
+      "humidity": 88
     },
     {
       "dt": 1783479600,
